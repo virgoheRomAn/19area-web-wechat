@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="no"/>
+    <meta name="wap-font-scale" content="no">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>微网站-设置</title>
+    <link rel="stylesheet" href="css/cropper.min.css">
+    <link rel="stylesheet" href="css/jBox.min.css">
+    <link rel="stylesheet" href="css/common.min.css">
+    <link rel="stylesheet" href="css/index.min.css">
+</head>
+<body class="background">
+<div class="wrap bottom">
+    <div class="container">
+        <div class="content-box personal-box">
+            <div class="fb-user-form">
+                <div class="user-list user-head">
+                    <div class="user-item">
+                        <a class="link" href="javascript:;" id="headBtn">
+                            <span>头像</span>
+                            <div class="cont">
+                                <img src="images/user-head.png"/>
+                                <input id="uploadBtn" type="file">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="user-list">
+                    <div class="user-item">
+                        <a class="link" href="javascript:;" id="nameBtn">
+                            <span>名字</span>
+                            <div class="cont">
+                                <em>周海宁</em>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="user-item">
+                        <span>ID</span>
+                        <div class="cont none-icon">
+                            <em>18823205626</em>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-list">
+                    <div class="user-item">
+                        <a class="link" href="javascript:;" id="storeBtn">
+                            <span>商家设计师</span>
+                            <div class="cont">
+                                <em>否</em>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="user-list">
+                    <div class="user-item">
+                        <a class="d-width tm-center fs-14 tc-333" href="login-register.html">退出登录</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <ul>
+            <li><a href="index.html"><i class="icon icon-footer1"></i><span>首页</span></a></li>
+            <li><a href="family.html"><i class="icon icon-footer2"></i><span>找我家</span></a></li>
+            <li><a href="store.html"><i class="icon icon-footer3"></i><span>品牌小店</span></a></li>
+            <li><a class="active" href="personal.html"><i class="icon icon-footer4 active"></i><span>我的</span></a></li>
+        </ul>
+    </div>
+</div>
+
+<!--上传-->
+<div class="fb-pop-disk upload-pop">
+    <div class="fb-pop-box upload-pop-box animated-bottom">
+        <div class="fb-pop-bg transparent bto-full">
+            <div class="fb-disk-bd">
+                <div class="upload-pop-bar">
+                    <!--<label class="upload-img"></label>-->
+                    <div class="upload-btn">
+                        <a href="javascript:;" id="cancel">取消</a>
+                        <a href="javascript:;" id="sure">完成</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--修改名字-->
+<div class="fb-pop-disk change-text-pop">
+    <div class="fb-pop-box animated-bottom">
+        <div class="fb-pop-bg gray bto-full">
+            <div class="fb-disk-bd">
+                <div class="change-box">
+                    <label class="form-input border big tb gray clean">
+                        <input class="change-input" type="text" placeholder="请输入名字" value="">
+                        <a class="clean-btn" href="javascript:;">×</a>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--所属商家-->
+<div class="fb-pop-disk store-pop">
+    <div class="fb-pop-box animated-bottom">
+        <div class="fb-pop-bg gray bto-full">
+            <div class="fb-disk-bd">
+                <div class="d-width">
+                    <div class="fb-user-form">
+                        <div class="user-list bd-bto">
+                            <div class="user-item">
+                                <a class="link store-name" href="javascript:;">
+                                    <span>重庆欧亚达家居江北商场</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="store-exit" href="javascript:;" id="ExitBtn">退出商家?</a>
+                </div>
+                <!--没有商家-->
+                <div class="none-data small">
+                    <div class="d-table">
+                        <div class="cell">
+                            <label class="image"><img src="images/none-store.png"></label>
+                            <label class="text">您还没加入商家</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/cropper.min.js"></script>
+<script src="js/jQuery.jBox.js"></script>
+<script src="js/Global.js"></script>
+<script src="js/base.js"></script>
+<script>
+    $(function () {
+        //头像上传
+        var upload = uploadCropperImage({
+            element: "#uploadBtn",
+            diskElement: ".upload-pop",
+            type: "radius",
+            ensureFun: function ($image, URL, option) {
+                $.jBox.loading("正在上传中，请稍后...", {boxID: "loadingBox"});
+                setTimeout(function () {
+                    $.jBox.close("#loadingBox", null, function () {
+                        $.jBox.success("操作成功！", {
+                            closeFun: function () {
+                                $("#headBtn").find("img").attr("src", URL);
+                                $(option.diskElement).find(".upload-img").remove();
+                            }
+                        });
+                    });
+                }, 1000);
+            }
+        }, "post");
+
+        $("#sure").click(function () {
+            upload.sure();
+        });
+
+        $("#cancel").click(function () {
+            upload.cancel();
+        });
+
+
+        //所属商家
+        var store = FB.showDiskPop({
+            clickEle: "#storeBtn",
+            diskEle: ".store-pop"
+        });
+        $(document).on("click", ".store-name, .none-data", function () {
+            store.closeElement(".store-pop");
+        });
+
+        //修改名字
+        var changeName = FB.showDiskPop({
+            clickEle: "#nameBtn",
+            diskEle: ".change-text-pop",
+            openCallback: function (opt) {
+                var that = $(opt.diskEle).find(".change-input")[0];
+                setTimeout(function () {
+                    that.scrollIntoView(true);
+                }, 500)
+            }
+        });
+
+        $(".change-input").on("blur", function () {
+            changeName.closeElement(".change-text-pop");
+        }).on("keydown", function (e) {
+            if (e.keyCode == "13") {
+                changeName.closeElement(".change-text-pop");
+                $(this).blur();
+            }
+        });
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="no"/>
+    <meta name="wap-font-scale" content="no">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>微网站找我家</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/jBox.min.css">
+    <link rel="stylesheet" href="css/common.min.css">
+    <link rel="stylesheet" href="css/index.min.css">
+</head>
+<body class="isHide">
+<div class="wrap d-height top bottom">
+    <div class="header">
+        <div class="header-cont">
+            <div class="location-area">
+                <a href="javascript:;" id="showArea">
+                    <i class="icon icon-area"></i>
+                    <span class="text">重庆</span>
+                </a>
+            </div>
+            <div class="search-box">
+                <div class="search-btn">
+                    <label>
+                        <span class="search-animate">
+                            <i class="icon icon-search"></i>
+                            <input class="search-input" type="text" placeholder="搜索" value="">
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <a class="search-close" href="javascript:;">取消</a>
+        </div>
+        <div class="search-cont">
+            <a class="arrow" href="#">
+                <i class="icon icon-search"></i>
+                <label>搜索 "<span id="searchText" class="tc-blue"></span>"</label>
+            </a>
+        </div>
+    </div>
+    <div class="container d-height">
+        <div class="content-box family-box overflow" id="container">
+            <div class="overflow-cont">
+                <div class="family-box-content fb-box-list">
+                    <ul class="family-list row-1" id="list">
+                        <li>
+                            <a href="family-details.html">
+                                <div class="family-list-cont">
+                                    <label class="image lazy">
+                                        <img src="images/family-lazyloading.png" data-original="images/family-img1.jpg">
+                                        <span class="image-loading"></span>
+                                    </label>
+                                    <div class="intro">
+                                        <div class="d-table d-height">
+                                            <div class="cell">
+                                                <span class="fs-14 tc-333 tm-clamp mb-10">万科观承</span>
+                                                <span class="fs-10 tc-999 tm-ellipsis">183659套方案</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="family-details.html">
+                                <div class="family-list-cont">
+                                    <label class="image lazy">
+                                        <img src="images/family-lazyloading.png" data-original="images/family-img2.jpg">
+                                        <span class="image-loading"></span>
+                                    </label>
+                                    <div class="intro">
+                                        <div class="d-table d-height">
+                                            <div class="cell">
+                                                <span class="fs-14 tc-333 tm-clamp mb-10">万科观承万科观承万科观承万科观承万科观承万科观承</span>
+                                                <span class="fs-10 tc-999 tm-ellipsis">183659套方案</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="family-details.html">
+                                <div class="family-list-cont">
+                                    <label class="image lazy">
+                                        <img src="images/family-lazyloading.png" data-original="images/family-img3.jpg">
+                                        <span class="image-loading"></span>
+                                    </label>
+                                    <div class="intro">
+                                        <div class="d-table d-height">
+                                            <div class="cell">
+                                                <span class="fs-14 tc-333 tm-clamp mb-10">万科观承万科</span>
+                                                <span class="fs-10 tc-999 tm-ellipsis">183659套方案</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="family-details.html">
+                                <div class="family-list-cont">
+                                    <label class="image lazy">
+                                        <img src="images/family-lazyloading.png" data-original="images/family-img4.jpg">
+                                        <span class="image-loading"></span>
+                                    </label>
+                                    <div class="intro">
+                                        <div class="d-table d-height">
+                                            <div class="cell">
+                                                <span class="fs-14 tc-333 tm-clamp mb-10">万科观承万科观承科观承</span>
+                                                <span class="fs-10 tc-999 tm-ellipsis">183659套方案</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="family-details.html">
+                                <div class="family-list-cont">
+                                    <label class="image lazy">
+                                        <img src="images/family-lazyloading.png" data-original="images/family-img1.jpg">
+                                        <span class="image-loading"></span>
+                                    </label>
+                                    <div class="intro">
+                                        <div class="d-table d-height">
+                                            <div class="cell">
+                                                <span class="fs-14 tc-333 tm-clamp mb-10">万科观承</span>
+                                                <span class="fs-10 tc-999 tm-ellipsis">183659套方案</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="family-details.html">
+                                <div class="family-list-cont">
+                                    <label class="image lazy">
+                                        <img src="images/family-lazyloading.png" data-original="images/family-img2.jpg">
+                                        <span class="image-loading"></span>
+                                    </label>
+                                    <div class="intro">
+                                        <div class="d-table d-height">
+                                            <div class="cell">
+                                                <span class="fs-14 tc-333 tm-clamp mb-10">万科观承万科观承万科观承万科观承万科观承万科观承</span>
+                                                <span class="fs-10 tc-999 tm-ellipsis">183659套方案</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="family-details.html">
+                                <div class="family-list-cont">
+                                    <label class="image lazy">
+                                        <img src="images/family-lazyloading.png" data-original="images/family-img3.jpg">
+                                        <span class="image-loading"></span>
+                                    </label>
+                                    <div class="intro">
+                                        <div class="d-table d-height">
+                                            <div class="cell">
+                                                <span class="fs-14 tc-333 tm-clamp mb-10">万科观承万科</span>
+                                                <span class="fs-10 tc-999 tm-ellipsis">183659套方案</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="family-details.html">
+                                <div class="family-list-cont">
+                                    <label class="image lazy">
+                                        <img src="images/family-lazyloading.png" data-original="images/family-img4.jpg">
+                                        <span class="image-loading"></span>
+                                    </label>
+                                    <div class="intro">
+                                        <div class="d-table d-height">
+                                            <div class="cell">
+                                                <span class="fs-14 tc-333 tm-clamp mb-10">万科观承万科观承科观承</span>
+                                                <span class="fs-10 tc-999 tm-ellipsis">183659套方案</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="fb-list-loading">
+                    <i><img src="images/icon/loading.gif"></i>
+                    <span>加载中...</span>
+                </div>
+            </div>
+        </div>
+        <!--没有搜索到楼盘信息-->
+        <div class="none-data">
+            <div class="d-table">
+                <div class="cell">
+                    <label class="image"><img src="images/search-none-family.png"></label>
+                    <label class="text">没有匹配的楼盘，重新筛选试试</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <ul>
+            <li><a href="index.html"><i class="icon icon-footer1 "></i><span>首页</span></a></li>
+            <li><a class="active" href="family.html"><i class="icon icon-footer2 active"></i><span>找我家</span></a></li>
+            <li><a href="store.html"><i class="icon icon-footer3"></i><span>品牌小店</span></a></li>
+            <li><a href="personal.html"><i class="icon icon-footer4"></i><span>我的</span></a></li>
+        </ul>
+    </div>
+    <div class="fb-pop-disk z-index-21" id="searchBG"></div>
+</div>
+<a class="p-fix go-top" href="javascript:;" id="goTop"><i class="icon icon-top"></i></a>
+
+
+<!--右侧选择定位地址-->
+<div class="fb-pop-disk location-pop">
+    <div class="fb-pop-box location-pop-box animated-right">
+        <div class="fb-pop-bg gray has-hd left">
+            <div class="fb-disk-hd gray">
+                <a class="fb-back-btn" href="javascript:;"><i>&lt;</i></a>
+                <span class="fb-disk-title">选择城市</span>
+                <a class="fb-close-btn" href="javascript:;"><i>&times;</i></a>
+            </div>
+            <div class="fb-disk-bd">
+                <div class="overflow">
+                    <div class="city-box province">
+                        <a href="javascript:;">北京</a>
+                        <a href="javascript:;">北京</a>
+                        <a href="javascript:;">北京</a>
+                        <a href="javascript:;">北京</a>
+                        <a href="javascript:;">北京</a>
+                        <a href="javascript:;">北京</a>
+                        <a href="javascript:;">北京</a>
+                        <a href="javascript:;">北京</a>
+                        <a href="javascript:;">北京</a>
+                        <a href="javascript:;">北京</a>
+                        <a href="javascript:;">北京</a>
+                        <a href="javascript:;">北京</a>
+                        <a href="javascript:;">北京</a>
+                        <a href="javascript:;">北京</a>
+                        <a href="javascript:;">北京</a>
+                        <a href="javascript:;">北京</a>
+                        <a href="javascript:;">北京</a>
+                        <a href="javascript:;">北京</a>
+                        <a href="javascript:;">北京</a>
+                        <a href="javascript:;">北京</a>
+                        <a href="javascript:;">北京</a>
+                    </div>
+                    <div class="city-box city"></div>
+                </div>
+                <div class="fb-disk-loading">
+                    <div class="d-table d-height">
+                        <div class="cell">
+                            <label>
+                                <img src="images/loading.gif">
+                                <span>加载中...</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--公用loading-->
+<div class="fb-pop-disk">
+    <div class="fb-disk-loading common-loading">
+        <div class="d-table d-height">
+            <div class="cell">
+                <label>
+                    <img src="images/loading.gif">
+                    <span>加载中...</span>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/template" id="listHtml">
+    <li>
+        <a href="family-details.html">
+            <div class="family-list-cont">
+                <label class="image lazy ajax">
+                    <img src="images/family-lazyloading.png" data-original="images/family-img4.jpg">
+                    <span class="image-loading"></span>
+                </label>
+                <div class="intro">
+                    <div class="d-table d-height">
+                        <div class="cell">
+                            <span class="fs-14 tc-333 tm-clamp mb-10">ajax加载数据%*num*%</span>
+                            <span class="fs-10 tc-999 tm-ellipsis">183659套方案</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </li>
+</script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery.lazyload.min.js"></script>
+<script src="js/Global.js"></script>
+<script src=js/base.js></script>
+<script>
+    $(function () {
+        //图片lazy
+        FB.proImgLazyLoad(".image.lazy img", "#container");
+        //页面滚动
+        var ajaxDataNum = 0, downFlag = false;
+        FB.pageScroll({
+            hasTop: true,
+            element: "#container",
+            ajaxFun: function () {
+                if (!downFlag) {
+                    downFlag = true;
+                    var list = $("#listHtml").html();
+                    var str = "";
+                    for (var i = 0; i <= 5; i++) {
+                        str += list.replace("%*num*%", "第" + (ajaxDataNum + 1) + "次，第" + (i + 1) + "条");
+                    }
+                    setTimeout(function () {
+                        ajaxDataNum++;
+                        if (ajaxDataNum >= 5) {
+                            $(".fb-list-loading").html("没有更多数据");
+                            return false;
+                        }
+                        $("#list").append(str);
+
+                        //加载ajax的图片
+                        FB.proImgLazyLoad(".image.lazy.ajax img", "#container", function (ele) {
+                            ele.removeClass("ajax");
+                        });
+                        downFlag = false;
+                    }, 1000);
+                }
+            }
+        });
+    })
+</script>
+</body>
+</html>
